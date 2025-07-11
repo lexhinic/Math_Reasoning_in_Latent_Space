@@ -60,6 +60,7 @@ def extract_theorem_from_tacticstate(state):
     '''
     if not isinstance(state, TacticState):
         raise ValueError("Expected a TacticState object.")
+    #TODO
     
         
         

@@ -1,6 +1,3 @@
-"""
-Main entry point for mathematical reasoning in latent space
-"""
 import os
 import sys
 import logging

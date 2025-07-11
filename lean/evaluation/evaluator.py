@@ -1,6 +1,3 @@
-"""
-Evaluation module for multi-step reasoning in latent space
-"""
 import os
 import json
 import logging

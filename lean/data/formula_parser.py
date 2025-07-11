@@ -1,7 +1,3 @@
-"""
-Parser for converting Lean formulas to graph representations
-Enhanced with better Lean 4 syntax support
-"""
 import re
 import networkx as nx
 from typing import Dict, List, Tuple, Any, Optional, Set, Union

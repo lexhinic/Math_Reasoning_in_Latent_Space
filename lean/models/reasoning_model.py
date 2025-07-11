@@ -1,6 +1,3 @@
-"""
-Main reasoning model for mathematical reasoning in latent space
-"""
 import torch
 import torch.nn as nn
 import torch.nn.functional as F

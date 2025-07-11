@@ -1,6 +1,3 @@
-"""
-Training module for mathematical reasoning model
-"""
 import os
 import time
 import logging

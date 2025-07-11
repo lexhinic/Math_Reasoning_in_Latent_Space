@@ -1,7 +1,3 @@
-"""
-Configuration file for mathematical reasoning in latent space
-Adapted for Lean/LeanDojo from the original HOL Light implementation
-"""
 import os
 from dataclasses import dataclass
 from typing import Dict, Any

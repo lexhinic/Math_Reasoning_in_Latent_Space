@@ -1,4 +1,3 @@
-# evaluation/metrics.py
 import numpy as np
 import torch
 from sklearn.metrics import roc_curve, auc

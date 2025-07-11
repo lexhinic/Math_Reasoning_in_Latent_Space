@@ -1,4 +1,3 @@
-# config.py
 class Config:
     # Data parameters
     HOL_LIGHT_PATH = "/home/stu4/hol_light"
