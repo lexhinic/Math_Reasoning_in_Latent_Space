@@ -35,16 +35,11 @@ class HOLRewriteDataset(Dataset):
             self.rewriter = HOLLightRewriter(config.HOL_LIGHT_PATH, timeout=config.TIMEOUT)
         
         # Load the theorem database
-#        self.theorems = self._load_theorems()
+        self.theorems = self._load_theorems()
         
         # Generate or load the rewrite examples
-#        self.examples = self._generate_examples()
-
-        self.examples = [("(a + 0) + b)", "!(x:num). x + 0 = x", 1, "a + b"), ("(a + b)", "!(x:num). x + 0 = x", 0, None), ("(a * (b * 1))", "!(x:num). x * 1 = x", 1, "a * b"), ("(a * b)", "!(x:num). x * 1 = x", 0, None), ("~~P", "!(p:bool). ~~p = p", 1, "P"), ("~P", "!(p:bool). ~~p = p", 0, None)]
-
-    def _load_theorems(self):
-        """Load theorems from the HOList database based on the split."""
-        # Determine the theorem range based on the split
+        self.examples = self._generate_examples()
+        
         if self.split == "train":
             start_idx = 0
             end_idx = self.config.TRAIN_SPLIT
@@ -54,16 +49,19 @@ class HOLRewriteDataset(Dataset):
         else:  # test
             start_idx = self.config.TRAIN_SPLIT + self.config.VAL_SPLIT
             end_idx = self.config.TRAIN_SPLIT + self.config.VAL_SPLIT + self.config.TEST_SPLIT
-        
-        # Load the theorems from the database
+        self.examples = self.examples[start_idx:end_idx]
+
+#        self.examples = [("(a + 0) + b)", "!(x:num). x + 0 = x", 1, "a + b"), ("(a + b)", "!(x:num). x + 0 = x", 0, None), ("(a * (b * 1))", "!(x:num). x * 1 = x", 1, "a * b"), ("(a * b)", "!(x:num). x * 1 = x", 0, None), ("~~P", "!(p:bool). ~~p = p", 1, "P"), ("~P", "!(p:bool). ~~p = p", 0, None)]
+
+    def _load_theorems(self):
+        """Load theorems from the HOList database."""
         theorems = []
         
         with open(os.path.join(self.config.HOLIST_DB_PATH, "theorems.txt"), "r") as f:
             for i, line in enumerate(f):
-                if i >= start_idx and i < end_idx:
-                    # Parse the theorem
-                    theorem_name, theorem_statement = line.strip().split(":", 1)
-                    theorems.append((theorem_name, theorem_statement))
+                # Parse the theorem
+                theorem_name, theorem_statement = line.strip().split(":", 1)
+                theorems.append((theorem_name, theorem_statement))
         
         return theorems
     
@@ -74,6 +72,7 @@ class HOLRewriteDataset(Dataset):
         """
         # Check if examples are already cached
         cache_path = os.path.join(self.config.HOLIST_DB_PATH, f"{self.split}_examples.pkl")
+        txt_cache_path = os.path.join(self.config.HOLIST_DB_PATH, f"{self.split}_examples.txt")
         
         if os.path.exists(cache_path):
             print(f"Loading cached examples from {cache_path}")
@@ -101,6 +100,47 @@ class HOLRewriteDataset(Dataset):
         # Cache the examples
         with open(cache_path, "wb") as f:
             pickle.dump(examples, f)
+            
+        # Also save in human-readable txt format
+        print(f"Saving human-readable examples to {txt_cache_path}")
+        with open(txt_cache_path, "w", encoding="utf-8") as f:
+            f.write(f"Generated examples for {self.split} split\n")
+            f.write(f"Total examples: {len(examples)}\n")
+            f.write("=" * 80 + "\n\n")
+            
+            # Count successful and failed examples
+            successful_count = sum(1 for ex in examples if ex[2] == 1)
+            failed_count = len(examples) - successful_count
+            
+            f.write(f"Statistics:\n")
+            f.write(f"Successful rewrites: {successful_count}\n")
+            f.write(f"Failed rewrites: {failed_count}\n")
+            f.write(f"Success rate: {successful_count / len(examples) * 100:.2f}%\n")
+            f.write("=" * 80 + "\n\n")
+            
+            # Write examples grouped by success/failure
+            f.write("SUCCESSFUL REWRITES:\n")
+            f.write("-" * 40 + "\n")
+            successful_examples = [ex for ex in examples if ex[2] == 1]
+            for idx, (t_statement, p_statement, success, result) in enumerate(successful_examples):
+                f.write(f"Example {idx + 1}:\n")
+                f.write(f"  Theorem (T): {t_statement}\n")
+                f.write(f"  Parameter (P): {p_statement}\n")
+                f.write(f"  Result (R): {result}\n")
+                f.write(f"  Success: {success}\n")
+                f.write("\n")
+                
+            f.write("\n" + "=" * 80 + "\n\n")
+            f.write("FAILED REWRITES:\n")
+            f.write("-" * 40 + "\n")
+            failed_examples = [ex for ex in examples if ex[2] == 0]
+            for idx, (t_statement, p_statement, success, result) in enumerate(failed_examples):
+                f.write(f"Example {idx + 1}:\n")
+                f.write(f"  Theorem (T): {t_statement}\n")
+                f.write(f"  Parameter (P): {p_statement}\n")
+                f.write(f"  Result: None (failed)\n")
+                f.write(f"  Success: {success}\n")
+                f.write("\n")
         
         return examples
     
@@ -242,7 +282,10 @@ def generate_multi_step_datasets(config, max_steps=9):
         List of datasets, one for each rewrite step
     """
     # Initialize the rewriter and parser
-    rewriter = HOLLightRewriter(config.HOL_LIGHT_PATH, timeout=config.TIMEOUT)
+    if config.USE_SIMULATED_HOLLIGHTREWRITER:
+        rewriter = SimulatedHOLLightRewriter(timeout=config.TIMEOUT)
+    else:
+        rewriter = HOLLightRewriter(config.HOL_LIGHT_PATH, timeout=config.TIMEOUT)
     parser = HOLLightParser()
     
     # Load validation theorems

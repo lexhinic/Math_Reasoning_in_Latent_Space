@@ -3,9 +3,9 @@ class Config:
     # Data parameters
     HOL_LIGHT_PATH = "/home/stu4/hol_light"
     HOLIST_DB_PATH = "/home/stu4/formal_reasoning/baseline/Math_Reasoning_in_Latent_Space/hol"
-    TRAIN_SPLIT = 2 #11655
-    VAL_SPLIT = 2 #668
-    TEST_SPLIT = 2 #3620
+    TRAIN_SPLIT = 10 #11655
+    VAL_SPLIT = 10 #668
+    TEST_SPLIT = 10 #3620
     TIMEOUT = 10  # Timeout for rewrite operations (seconds)
     USE_SIMULATED_HOLLIGHTREWRITER = True  # Use simulated HOLLightRewriter instead of HOLLightReWriter
     

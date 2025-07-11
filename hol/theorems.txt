@@ -1,3 +1,16 @@
+add_identity:!x. (x + 0) = x
+mult_identity:!x. (x * 1) = x
+add_commute:!x y. (x + y) = (y + x)
+mult_commute:!x y. (x * y) = (y * x)
+add_assoc:!x y z. (x + (y + z)) = ((x + y) + z)
+mult_assoc:!x y z. (x * (y * z)) = ((x * y) * z)
+distrib_left:!x y z. (x * (y + z)) = ((x * y) + (x * z))
+distrib_right:!x y z. ((x + y) * z) = ((x * z) + (y * z))
+double_neg:!x. ~~x = x
+de_morgan_and:!x y. ~(x /\ y) = (~x \/ ~y)
+de_morgan_or:!x y. ~(x \/ y) = (~x /\ ~y)
+implies_to_or:!x y. (x ==> y) = (~x \/ y)
+equiv_def:!x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
 1:(a + 0) * (b * 1)
 2:(a + b) + c
 3:a * (b + c)
@@ -13,16 +26,3 @@
 13:~(P \/ Q) /\ R
 14:(a + 0) + (b * 1)
 15:(a * (b + c)) * d
-add_identity:!x. (x + 0) = x
-mult_identity:!x. (x * 1) = x
-add_commute:!x y. (x + y) = (y + x)
-mult_commute:!x y. (x * y) = (y * x)
-add_assoc:!x y z. (x + (y + z)) = ((x + y) + z)
-mult_assoc:!x y z. (x * (y * z)) = ((x * y) * z)
-distrib_left:!x y z. (x * (y + z)) = ((x * y) + (x * z))
-distrib_right:!x y z. ((x + y) * z) = ((x * z) + (y * z))
-double_neg:!x. ~~x = x
-de_morgan_and:!x y. ~(x /\ y) = (~x \/ ~y)
-de_morgan_or:!x y. ~(x \/ y) = (~x /\ ~y)
-implies_to_or:!x y. (x ==> y) = (~x \/ y)
-equiv_def:!x y. (x <=> y) = ((x ==> y) /\ (y ==> x))

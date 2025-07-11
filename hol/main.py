@@ -4,6 +4,7 @@ import argparse
 import torch
 import numpy as np
 import random
+from termcolor import colored
 import matplotlib.pyplot as plt
 from config import Config
 from models.model import RewriteReasoningModel
@@ -36,9 +37,9 @@ def parse_args():
     parser.add_argument("--train", action="store_true", help="Train the model")
     parser.add_argument("--evaluate", action="store_true", help="Evaluate the model")
     parser.add_argument("--visualize", action="store_true", help="Visualize the results")
-    parser.add_argument("--model_path", type=str, default="model.pt", help="Path to save/load model")
-    parser.add_argument("--results_path", type=str, default="results.pt", help="Path to save/load results")
-    parser.add_argument("--output_dir", type=str, default="output", help="Directory to save visualizations")
+    parser.add_argument("--model_path", type=str, default="/home/stu4/formal_reasoning/baseline/Math_Reasoning_in_Latent_Space/hol/output/model.pt", help="Path to save/load model")
+    parser.add_argument("--results_path", type=str, default="/home/stu4/formal_reasoning/baseline/Math_Reasoning_in_Latent_Space/hol/output/results.pt", help="Path to save/load results")
+    parser.add_argument("--output_dir", type=str, default="/home/stu4/formal_reasoning/baseline/Math_Reasoning_in_Latent_Space/hol/output", help="Directory to save visualizations")
     parser.add_argument("--seed", type=int, default=3407, help="Random seed")
     parser.add_argument("--gpu", type=int, default=0, help="GPU index")
     parser.add_argument("--max_steps", type=int, default=1, help="Maximum number of rewrite steps for evaluation")
@@ -55,7 +56,7 @@ def main():
     
     # Set device
     device = torch.device(f"cuda:{args.gpu}" if torch.cuda.is_available() else "cpu")
-    print(f"Using device: {device}")
+    print(colored(f"Using device: {device}"), "blue")
     
     # Create model
     model = RewriteReasoningModel(config).to(device)
@@ -64,34 +65,34 @@ def main():
     os.makedirs(args.output_dir, exist_ok=True)
     
     if args.train:
-        print("Training model...")
+        print(colored("Training model...", "blue"))
         model = train(model, config, device)
         
         # Save model
         torch.save(model.state_dict(), args.model_path)
-        print(f"Model saved to {args.model_path}")
+        print(colored(f"Model saved to {args.model_path}", "blue"))
     
     if args.evaluate or args.visualize:
-        print("Loading model...")
+        print(colored("Loading model...", "blue"))
         model.load_state_dict(torch.load(args.model_path, map_location=device))
         model.eval()
     
     if args.evaluate:
-        print("Generating multi-step datasets...")
+        print(colored("Generating multi-step datasets...", "blue"))
         datasets = generate_multi_step_datasets(config, max_steps=args.max_steps)
         
-        print("Evaluating multi-step reasoning...")
+        print(colored("Evaluating multi-step reasoning...", "blue"))
         results = evaluate_multi_step_reasoning(model, datasets, device, max_steps=args.max_steps)
         
         # Save results
         torch.save(results, args.results_path)
-        print(f"Results saved to {args.results_path}")
+        print(colored(f"Results saved to {args.results_path}", "blue"))
     
     if args.visualize:
-        print("Loading results...")
+        print(colored("Loading results...", "blue"))
         results = torch.load(args.results_path, map_location=device)
         
-        print("Creating visualizations...")
+        print(colored("Creating visualizations...", "blue"))
         
         # Plot ROC curves for different steps
 #        for step in [1, 5, 9]:
@@ -127,7 +128,7 @@ def main():
             )
             fig.savefig(os.path.join(args.output_dir, f"histogram_step{last_step+1}.png"))
         
-        print(f"Visualizations saved to {args.output_dir}")
+        print(colored(f"Visualizations saved to {args.output_dir}", "blue"))
 
 if __name__ == "__main__":
     main()

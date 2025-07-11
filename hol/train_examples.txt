@@ -1,0 +1,2285 @@
+Generated examples for train split
+Total examples: 378
+================================================================================
+
+Statistics:
+Successful rewrites: 217
+Failed rewrites: 161
+Success rate: 57.41%
+================================================================================
+
+SUCCESSFUL REWRITES:
+----------------------------------------
+Example 1:
+  Theorem (T): (a + 0) * (b * 1)
+  Parameter (P): !x. (x + 0) = x
+  Result (R): a * b * 1
+  Success: 1
+
+Example 2:
+  Theorem (T): (a + 0) * (b * 1)
+  Parameter (P): !x. (x * 1) = x
+  Result (R): a + 0 * b
+  Success: 1
+
+Example 3:
+  Theorem (T): (a + 0) * (b * 1)
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result (R): 0 + a * b * 1
+  Success: 1
+
+Example 4:
+  Theorem (T): (a + 0) * (b * 1)
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result (R): b * 1 * a + 0
+  Success: 1
+
+Example 5:
+  Theorem (T): (a + 0) * (b * 1)
+  Parameter (P): !x y z. (x + (y + z)) = ((x + y) + z)
+  Result (R): a * b * 1
+  Success: 1
+
+Example 6:
+  Theorem (T): (a + 0) * (b * 1)
+  Parameter (P): !x y z. (x * (y * z)) = ((x * y) * z)
+  Result (R): a + 0 * b * 1
+  Success: 1
+
+Example 7:
+  Theorem (T): (a + 0) * (b * 1)
+  Parameter (P): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Result (R): a * b * 1
+  Success: 1
+
+Example 8:
+  Theorem (T): (a + 0) * (b * 1)
+  Parameter (P): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Result (R): a * b * 1 + 0 * b * 1
+  Success: 1
+
+Example 9:
+  Theorem (T): (a + 0) * (b * 1)
+  Parameter (P): !x. ~~x = x
+  Result (R): a * b * 1
+  Success: 1
+
+Example 10:
+  Theorem (T): (a + 0) * (b * 1)
+  Parameter (P): !x y. ~(x /\ y) = (~x \/ ~y)
+  Result (R): a * b * 1
+  Success: 1
+
+Example 11:
+  Theorem (T): (a + 0) * (b * 1)
+  Parameter (P): !x y. ~(x \/ y) = (~x /\ ~y)
+  Result (R): a * b * 1
+  Success: 1
+
+Example 12:
+  Theorem (T): (a + 0) * (b * 1)
+  Parameter (P): !x y. (x ==> y) = (~x \/ y)
+  Result (R): a * b * 1
+  Success: 1
+
+Example 13:
+  Theorem (T): (a + 0) * (b * 1)
+  Parameter (P): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Result (R): a * b * 1
+  Success: 1
+
+Example 14:
+  Theorem (T): (a + b) + c
+  Parameter (P): !x. (x + 0) = x
+  Result (R): c + a + b
+  Success: 1
+
+Example 15:
+  Theorem (T): (a + b) + c
+  Parameter (P): !x. (x * 1) = x
+  Result (R): c + a + b
+  Success: 1
+
+Example 16:
+  Theorem (T): (a + b) + c
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result (R): c + a + b
+  Success: 1
+
+Example 17:
+  Theorem (T): (a + b) + c
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result (R): c + a + b
+  Success: 1
+
+Example 18:
+  Theorem (T): (a + b) + c
+  Parameter (P): !x y z. (x + (y + z)) = ((x + y) + z)
+  Result (R): c + a + b
+  Success: 1
+
+Example 19:
+  Theorem (T): (a + b) + c
+  Parameter (P): !x y z. (x * (y * z)) = ((x * y) * z)
+  Result (R): c + a + b
+  Success: 1
+
+Example 20:
+  Theorem (T): (a + b) + c
+  Parameter (P): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Result (R): c + a + b
+  Success: 1
+
+Example 21:
+  Theorem (T): (a + b) + c
+  Parameter (P): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Result (R): c + a + b
+  Success: 1
+
+Example 22:
+  Theorem (T): (a + b) + c
+  Parameter (P): !x. ~~x = x
+  Result (R): c + a + b
+  Success: 1
+
+Example 23:
+  Theorem (T): (a + b) + c
+  Parameter (P): !x y. ~(x /\ y) = (~x \/ ~y)
+  Result (R): c + a + b
+  Success: 1
+
+Example 24:
+  Theorem (T): (a + b) + c
+  Parameter (P): !x y. ~(x \/ y) = (~x /\ ~y)
+  Result (R): c + a + b
+  Success: 1
+
+Example 25:
+  Theorem (T): (a + b) + c
+  Parameter (P): !x y. (x ==> y) = (~x \/ y)
+  Result (R): c + a + b
+  Success: 1
+
+Example 26:
+  Theorem (T): (a + b) + c
+  Parameter (P): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Result (R): c + a + b
+  Success: 1
+
+Example 27:
+  Theorem (T): (a + b) + c
+  Parameter (P): (a + 0) * (b * 1)
+  Result (R): c + a + b
+  Success: 1
+
+Example 28:
+  Theorem (T): a * (b + c)
+  Parameter (P): !x. (x + 0) = x
+  Result (R): a * c + b
+  Success: 1
+
+Example 29:
+  Theorem (T): a * (b + c)
+  Parameter (P): !x. (x * 1) = x
+  Result (R): a * c + b
+  Success: 1
+
+Example 30:
+  Theorem (T): a * (b + c)
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result (R): a * c + b
+  Success: 1
+
+Example 31:
+  Theorem (T): a * (b + c)
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result (R): b + c * a
+  Success: 1
+
+Example 32:
+  Theorem (T): a * (b + c)
+  Parameter (P): !x y z. (x + (y + z)) = ((x + y) + z)
+  Result (R): a * c + b
+  Success: 1
+
+Example 33:
+  Theorem (T): a * (b + c)
+  Parameter (P): !x y z. (x * (y * z)) = ((x * y) * z)
+  Result (R): a * c + b
+  Success: 1
+
+Example 34:
+  Theorem (T): a * (b + c)
+  Parameter (P): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Result (R): a * b + a * c
+  Success: 1
+
+Example 35:
+  Theorem (T): a * (b + c)
+  Parameter (P): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Result (R): a * c + b
+  Success: 1
+
+Example 36:
+  Theorem (T): a * (b + c)
+  Parameter (P): !x. ~~x = x
+  Result (R): a * c + b
+  Success: 1
+
+Example 37:
+  Theorem (T): a * (b + c)
+  Parameter (P): !x y. ~(x /\ y) = (~x \/ ~y)
+  Result (R): a * c + b
+  Success: 1
+
+Example 38:
+  Theorem (T): a * (b + c)
+  Parameter (P): !x y. ~(x \/ y) = (~x /\ ~y)
+  Result (R): a * c + b
+  Success: 1
+
+Example 39:
+  Theorem (T): a * (b + c)
+  Parameter (P): !x y. (x ==> y) = (~x \/ y)
+  Result (R): a * c + b
+  Success: 1
+
+Example 40:
+  Theorem (T): a * (b + c)
+  Parameter (P): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Result (R): a * c + b
+  Success: 1
+
+Example 41:
+  Theorem (T): a * (b + c)
+  Parameter (P): (a + 0) * (b * 1)
+  Result (R): a * c + b
+  Success: 1
+
+Example 42:
+  Theorem (T): a * (b + c)
+  Parameter (P): (a + b) + c
+  Result (R): a * c + b
+  Success: 1
+
+Example 43:
+  Theorem (T): (a + b) * c
+  Parameter (P): !x. (x + 0) = x
+  Result (R): b + a * c
+  Success: 1
+
+Example 44:
+  Theorem (T): (a + b) * c
+  Parameter (P): !x. (x * 1) = x
+  Result (R): b + a * c
+  Success: 1
+
+Example 45:
+  Theorem (T): (a + b) * c
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result (R): b + a * c
+  Success: 1
+
+Example 46:
+  Theorem (T): (a + b) * c
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result (R): c * a + b
+  Success: 1
+
+Example 47:
+  Theorem (T): (a + b) * c
+  Parameter (P): !x y z. (x + (y + z)) = ((x + y) + z)
+  Result (R): b + a * c
+  Success: 1
+
+Example 48:
+  Theorem (T): (a + b) * c
+  Parameter (P): !x y z. (x * (y * z)) = ((x * y) * z)
+  Result (R): b + a * c
+  Success: 1
+
+Example 49:
+  Theorem (T): (a + b) * c
+  Parameter (P): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Result (R): b + a * c
+  Success: 1
+
+Example 50:
+  Theorem (T): (a + b) * c
+  Parameter (P): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Result (R): a * c + b * c
+  Success: 1
+
+Example 51:
+  Theorem (T): (a + b) * c
+  Parameter (P): !x. ~~x = x
+  Result (R): b + a * c
+  Success: 1
+
+Example 52:
+  Theorem (T): (a + b) * c
+  Parameter (P): !x y. ~(x /\ y) = (~x \/ ~y)
+  Result (R): b + a * c
+  Success: 1
+
+Example 53:
+  Theorem (T): (a + b) * c
+  Parameter (P): !x y. ~(x \/ y) = (~x /\ ~y)
+  Result (R): b + a * c
+  Success: 1
+
+Example 54:
+  Theorem (T): (a + b) * c
+  Parameter (P): !x y. (x ==> y) = (~x \/ y)
+  Result (R): b + a * c
+  Success: 1
+
+Example 55:
+  Theorem (T): (a + b) * c
+  Parameter (P): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Result (R): b + a * c
+  Success: 1
+
+Example 56:
+  Theorem (T): (a + b) * c
+  Parameter (P): (a + 0) * (b * 1)
+  Result (R): b + a * c
+  Success: 1
+
+Example 57:
+  Theorem (T): (a + b) * c
+  Parameter (P): (a + b) + c
+  Result (R): b + a * c
+  Success: 1
+
+Example 58:
+  Theorem (T): (a + b) * c
+  Parameter (P): a * (b + c)
+  Result (R): b + a * c
+  Success: 1
+
+Example 59:
+  Theorem (T): (a * b) * c
+  Parameter (P): !x. (x + 0) = x
+  Result (R): c * a * b
+  Success: 1
+
+Example 60:
+  Theorem (T): (a * b) * c
+  Parameter (P): !x. (x * 1) = x
+  Result (R): c * a * b
+  Success: 1
+
+Example 61:
+  Theorem (T): (a * b) * c
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result (R): c * a * b
+  Success: 1
+
+Example 62:
+  Theorem (T): (a * b) * c
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result (R): c * a * b
+  Success: 1
+
+Example 63:
+  Theorem (T): (a * b) * c
+  Parameter (P): !x y z. (x + (y + z)) = ((x + y) + z)
+  Result (R): c * a * b
+  Success: 1
+
+Example 64:
+  Theorem (T): (a * b) * c
+  Parameter (P): !x y z. (x * (y * z)) = ((x * y) * z)
+  Result (R): c * a * b
+  Success: 1
+
+Example 65:
+  Theorem (T): (a * b) * c
+  Parameter (P): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Result (R): c * a * b
+  Success: 1
+
+Example 66:
+  Theorem (T): (a * b) * c
+  Parameter (P): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Result (R): c * a * b
+  Success: 1
+
+Example 67:
+  Theorem (T): (a * b) * c
+  Parameter (P): !x. ~~x = x
+  Result (R): c * a * b
+  Success: 1
+
+Example 68:
+  Theorem (T): (a * b) * c
+  Parameter (P): !x y. ~(x /\ y) = (~x \/ ~y)
+  Result (R): c * a * b
+  Success: 1
+
+Example 69:
+  Theorem (T): (a * b) * c
+  Parameter (P): !x y. ~(x \/ y) = (~x /\ ~y)
+  Result (R): c * a * b
+  Success: 1
+
+Example 70:
+  Theorem (T): (a * b) * c
+  Parameter (P): !x y. (x ==> y) = (~x \/ y)
+  Result (R): c * a * b
+  Success: 1
+
+Example 71:
+  Theorem (T): (a * b) * c
+  Parameter (P): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Result (R): c * a * b
+  Success: 1
+
+Example 72:
+  Theorem (T): (a * b) * c
+  Parameter (P): (a + 0) * (b * 1)
+  Result (R): c * a * b
+  Success: 1
+
+Example 73:
+  Theorem (T): (a * b) * c
+  Parameter (P): (a + b) + c
+  Result (R): c * a * b
+  Success: 1
+
+Example 74:
+  Theorem (T): (a * b) * c
+  Parameter (P): a * (b + c)
+  Result (R): c * a * b
+  Success: 1
+
+Example 75:
+  Theorem (T): (a * b) * c
+  Parameter (P): (a + b) * c
+  Result (R): c * a * b
+  Success: 1
+
+Example 76:
+  Theorem (T): (a * b) * c
+  Parameter (P): ~(P /\ Q)
+  Result (R): c * a * b
+  Success: 1
+
+Example 77:
+  Theorem (T): (a * b) * c
+  Parameter (P): (P ==> Q) \/ R
+  Result (R): c * a * b
+  Success: 1
+
+Example 78:
+  Theorem (T): a * (b * c)
+  Parameter (P): !x. (x + 0) = x
+  Result (R): b * c * a
+  Success: 1
+
+Example 79:
+  Theorem (T): a * (b * c)
+  Parameter (P): !x. (x * 1) = x
+  Result (R): b * c * a
+  Success: 1
+
+Example 80:
+  Theorem (T): a * (b * c)
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result (R): b * c * a
+  Success: 1
+
+Example 81:
+  Theorem (T): a * (b * c)
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result (R): b * c * a
+  Success: 1
+
+Example 82:
+  Theorem (T): a * (b * c)
+  Parameter (P): !x y z. (x + (y + z)) = ((x + y) + z)
+  Result (R): b * c * a
+  Success: 1
+
+Example 83:
+  Theorem (T): a * (b * c)
+  Parameter (P): !x y z. (x * (y * z)) = ((x * y) * z)
+  Result (R): a * b * c
+  Success: 1
+
+Example 84:
+  Theorem (T): a * (b * c)
+  Parameter (P): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Result (R): b * c * a
+  Success: 1
+
+Example 85:
+  Theorem (T): a * (b * c)
+  Parameter (P): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Result (R): b * c * a
+  Success: 1
+
+Example 86:
+  Theorem (T): a * (b * c)
+  Parameter (P): !x. ~~x = x
+  Result (R): b * c * a
+  Success: 1
+
+Example 87:
+  Theorem (T): a * (b * c)
+  Parameter (P): !x y. ~(x /\ y) = (~x \/ ~y)
+  Result (R): b * c * a
+  Success: 1
+
+Example 88:
+  Theorem (T): a * (b * c)
+  Parameter (P): !x y. ~(x \/ y) = (~x /\ ~y)
+  Result (R): b * c * a
+  Success: 1
+
+Example 89:
+  Theorem (T): a * (b * c)
+  Parameter (P): !x y. (x ==> y) = (~x \/ y)
+  Result (R): b * c * a
+  Success: 1
+
+Example 90:
+  Theorem (T): a * (b * c)
+  Parameter (P): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Result (R): b * c * a
+  Success: 1
+
+Example 91:
+  Theorem (T): a * (b * c)
+  Parameter (P): (a + 0) * (b * 1)
+  Result (R): b * c * a
+  Success: 1
+
+Example 92:
+  Theorem (T): a * (b * c)
+  Parameter (P): (a + b) + c
+  Result (R): b * c * a
+  Success: 1
+
+Example 93:
+  Theorem (T): a * (b * c)
+  Parameter (P): a * (b + c)
+  Result (R): b * c * a
+  Success: 1
+
+Example 94:
+  Theorem (T): a * (b * c)
+  Parameter (P): (a + b) * c
+  Result (R): b * c * a
+  Success: 1
+
+Example 95:
+  Theorem (T): a * (b * c)
+  Parameter (P): ~(P /\ Q)
+  Result (R): b * c * a
+  Success: 1
+
+Example 96:
+  Theorem (T): a * (b * c)
+  Parameter (P): (P ==> Q) \/ R
+  Result (R): b * c * a
+  Success: 1
+
+Example 97:
+  Theorem (T): a * (b * c)
+  Parameter (P): (a * b) * c
+  Result (R): b * c * a
+  Success: 1
+
+Example 98:
+  Theorem (T): (a + b) + (c + d)
+  Parameter (P): !x. (x + 0) = x
+  Result (R): c + d + a + b
+  Success: 1
+
+Example 99:
+  Theorem (T): (a + b) + (c + d)
+  Parameter (P): !x. (x * 1) = x
+  Result (R): c + d + a + b
+  Success: 1
+
+Example 100:
+  Theorem (T): (a + b) + (c + d)
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result (R): c + d + a + b
+  Success: 1
+
+Example 101:
+  Theorem (T): (a + b) + (c + d)
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result (R): c + d + a + b
+  Success: 1
+
+Example 102:
+  Theorem (T): (a + b) + (c + d)
+  Parameter (P): !x y z. (x + (y + z)) = ((x + y) + z)
+  Result (R): a + b + c + d
+  Success: 1
+
+Example 103:
+  Theorem (T): (a + b) + (c + d)
+  Parameter (P): !x y z. (x * (y * z)) = ((x * y) * z)
+  Result (R): c + d + a + b
+  Success: 1
+
+Example 104:
+  Theorem (T): (a + b) + (c + d)
+  Parameter (P): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Result (R): c + d + a + b
+  Success: 1
+
+Example 105:
+  Theorem (T): (a + b) + (c + d)
+  Parameter (P): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Result (R): c + d + a + b
+  Success: 1
+
+Example 106:
+  Theorem (T): (a + b) + (c + d)
+  Parameter (P): !x. ~~x = x
+  Result (R): c + d + a + b
+  Success: 1
+
+Example 107:
+  Theorem (T): (a + b) + (c + d)
+  Parameter (P): !x y. ~(x /\ y) = (~x \/ ~y)
+  Result (R): c + d + a + b
+  Success: 1
+
+Example 108:
+  Theorem (T): (a + b) + (c + d)
+  Parameter (P): !x y. ~(x \/ y) = (~x /\ ~y)
+  Result (R): c + d + a + b
+  Success: 1
+
+Example 109:
+  Theorem (T): (a + b) + (c + d)
+  Parameter (P): !x y. (x ==> y) = (~x \/ y)
+  Result (R): c + d + a + b
+  Success: 1
+
+Example 110:
+  Theorem (T): (a + b) + (c + d)
+  Parameter (P): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Result (R): c + d + a + b
+  Success: 1
+
+Example 111:
+  Theorem (T): (a + b) + (c + d)
+  Parameter (P): (a + 0) * (b * 1)
+  Result (R): c + d + a + b
+  Success: 1
+
+Example 112:
+  Theorem (T): (a + b) + (c + d)
+  Parameter (P): (a + b) + c
+  Result (R): c + d + a + b
+  Success: 1
+
+Example 113:
+  Theorem (T): (a + b) + (c + d)
+  Parameter (P): a * (b + c)
+  Result (R): c + d + a + b
+  Success: 1
+
+Example 114:
+  Theorem (T): (a + b) + (c + d)
+  Parameter (P): (a + b) * c
+  Result (R): c + d + a + b
+  Success: 1
+
+Example 115:
+  Theorem (T): (a + b) + (c + d)
+  Parameter (P): ~(P /\ Q)
+  Result (R): c + d + a + b
+  Success: 1
+
+Example 116:
+  Theorem (T): (a + b) + (c + d)
+  Parameter (P): (P ==> Q) \/ R
+  Result (R): c + d + a + b
+  Success: 1
+
+Example 117:
+  Theorem (T): (a + b) + (c + d)
+  Parameter (P): (a * b) * c
+  Result (R): c + d + a + b
+  Success: 1
+
+Example 118:
+  Theorem (T): (a + b) + (c + d)
+  Parameter (P): a * (b * c)
+  Result (R): c + d + a + b
+  Success: 1
+
+Example 119:
+  Theorem (T): (a * b) + (a * c)
+  Parameter (P): !x. (x + 0) = x
+  Result (R): a * c + a * b
+  Success: 1
+
+Example 120:
+  Theorem (T): (a * b) + (a * c)
+  Parameter (P): !x. (x * 1) = x
+  Result (R): a * c + a * b
+  Success: 1
+
+Example 121:
+  Theorem (T): (a * b) + (a * c)
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result (R): a * c + a * b
+  Success: 1
+
+Example 122:
+  Theorem (T): (a * b) + (a * c)
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result (R): b * a + c * a
+  Success: 1
+
+Example 123:
+  Theorem (T): (a * b) + (a * c)
+  Parameter (P): !x y z. (x + (y + z)) = ((x + y) + z)
+  Result (R): a * c + a * b
+  Success: 1
+
+Example 124:
+  Theorem (T): (a * b) + (a * c)
+  Parameter (P): !x y z. (x * (y * z)) = ((x * y) * z)
+  Result (R): a * c + a * b
+  Success: 1
+
+Example 125:
+  Theorem (T): (a * b) + (a * c)
+  Parameter (P): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Result (R): a * c + a * b
+  Success: 1
+
+Example 126:
+  Theorem (T): (a * b) + (a * c)
+  Parameter (P): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Result (R): a * c + a * b
+  Success: 1
+
+Example 127:
+  Theorem (T): (a * b) + (a * c)
+  Parameter (P): !x. ~~x = x
+  Result (R): a * c + a * b
+  Success: 1
+
+Example 128:
+  Theorem (T): (a * b) + (a * c)
+  Parameter (P): !x y. ~(x /\ y) = (~x \/ ~y)
+  Result (R): a * c + a * b
+  Success: 1
+
+Example 129:
+  Theorem (T): (a * b) + (a * c)
+  Parameter (P): !x y. ~(x \/ y) = (~x /\ ~y)
+  Result (R): a * c + a * b
+  Success: 1
+
+Example 130:
+  Theorem (T): (a * b) + (a * c)
+  Parameter (P): !x y. (x ==> y) = (~x \/ y)
+  Result (R): a * c + a * b
+  Success: 1
+
+Example 131:
+  Theorem (T): (a * b) + (a * c)
+  Parameter (P): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Result (R): a * c + a * b
+  Success: 1
+
+Example 132:
+  Theorem (T): (a * b) + (a * c)
+  Parameter (P): (a + 0) * (b * 1)
+  Result (R): a * c + a * b
+  Success: 1
+
+Example 133:
+  Theorem (T): (a * b) + (a * c)
+  Parameter (P): (a + b) + c
+  Result (R): a * c + a * b
+  Success: 1
+
+Example 134:
+  Theorem (T): (a * b) + (a * c)
+  Parameter (P): a * (b + c)
+  Result (R): a * c + a * b
+  Success: 1
+
+Example 135:
+  Theorem (T): (a * b) + (a * c)
+  Parameter (P): (a + b) * c
+  Result (R): a * c + a * b
+  Success: 1
+
+Example 136:
+  Theorem (T): (a * b) + (a * c)
+  Parameter (P): ~(P /\ Q)
+  Result (R): a * c + a * b
+  Success: 1
+
+Example 137:
+  Theorem (T): (a * b) + (a * c)
+  Parameter (P): (P ==> Q) \/ R
+  Result (R): a * c + a * b
+  Success: 1
+
+Example 138:
+  Theorem (T): (a * b) + (a * c)
+  Parameter (P): (a * b) * c
+  Result (R): a * c + a * b
+  Success: 1
+
+Example 139:
+  Theorem (T): (a * b) + (a * c)
+  Parameter (P): a * (b * c)
+  Result (R): a * c + a * b
+  Success: 1
+
+Example 140:
+  Theorem (T): (a * b) + (a * c)
+  Parameter (P): (a + b) + (c + d)
+  Result (R): a * c + a * b
+  Success: 1
+
+Example 141:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): !x. (x + 0) = x
+  Result (R): ~P <=> Q
+  Success: 1
+
+Example 142:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): !x. (x * 1) = x
+  Result (R): ~P <=> Q
+  Success: 1
+
+Example 143:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result (R): ~P <=> Q
+  Success: 1
+
+Example 144:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result (R): ~P <=> Q
+  Success: 1
+
+Example 145:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): !x y z. (x + (y + z)) = ((x + y) + z)
+  Result (R): ~P <=> Q
+  Success: 1
+
+Example 146:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): !x y z. (x * (y * z)) = ((x * y) * z)
+  Result (R): ~P <=> Q
+  Success: 1
+
+Example 147:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Result (R): ~P <=> Q
+  Success: 1
+
+Example 148:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Result (R): ~P <=> Q
+  Success: 1
+
+Example 149:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): !x. ~~x = x
+  Result (R): ~P <=> Q
+  Success: 1
+
+Example 150:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): !x y. ~(x /\ y) = (~x \/ ~y)
+  Result (R): ~P <=> Q
+  Success: 1
+
+Example 151:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): !x y. ~(x \/ y) = (~x /\ ~y)
+  Result (R): ~P <=> Q
+  Success: 1
+
+Example 152:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): !x y. (x ==> y) = (~x \/ y)
+  Result (R): ~P <=> Q
+  Success: 1
+
+Example 153:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Result (R): ( ==> R
+  Success: 1
+
+Example 154:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): (a + 0) * (b * 1)
+  Result (R): ~P <=> Q
+  Success: 1
+
+Example 155:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): (a + b) + c
+  Result (R): ~P <=> Q
+  Success: 1
+
+Example 156:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): a * (b + c)
+  Result (R): ~P <=> Q
+  Success: 1
+
+Example 157:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): (a + b) * c
+  Result (R): ~P <=> Q
+  Success: 1
+
+Example 158:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): ~(P /\ Q)
+  Result (R): ~P <=> Q
+  Success: 1
+
+Example 159:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): (P ==> Q) \/ R
+  Result (R): ~P <=> Q
+  Success: 1
+
+Example 160:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): (a * b) * c
+  Result (R): ~P <=> Q
+  Success: 1
+
+Example 161:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): a * (b * c)
+  Result (R): ~P <=> Q
+  Success: 1
+
+Example 162:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): (a + b) + (c + d)
+  Result (R): ~P <=> Q
+  Success: 1
+
+Example 163:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): (a * b) + (a * c)
+  Result (R): ~P <=> Q
+  Success: 1
+
+Example 164:
+  Theorem (T): (P <=> Q) ==> R
+  Parameter (P): (a \/ b) /\ (c \/ d)
+  Result (R): ~P <=> Q
+  Success: 1
+
+Example 165:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): !x. (x + 0) = x
+  Result (R): a + b * 1
+  Success: 1
+
+Example 166:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): !x. (x * 1) = x
+  Result (R): a + 0 + b
+  Success: 1
+
+Example 167:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result (R): b * 1 + a + 0
+  Success: 1
+
+Example 168:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result (R): a + 0 + 1 * b
+  Success: 1
+
+Example 169:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): !x y z. (x + (y + z)) = ((x + y) + z)
+  Result (R): a + b * 1
+  Success: 1
+
+Example 170:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): !x y z. (x * (y * z)) = ((x * y) * z)
+  Result (R): a + b * 1
+  Success: 1
+
+Example 171:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Result (R): a + b * 1
+  Success: 1
+
+Example 172:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Result (R): a + b * 1
+  Success: 1
+
+Example 173:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): !x. ~~x = x
+  Result (R): a + b * 1
+  Success: 1
+
+Example 174:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): !x y. ~(x /\ y) = (~x \/ ~y)
+  Result (R): a + b * 1
+  Success: 1
+
+Example 175:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): !x y. ~(x \/ y) = (~x /\ ~y)
+  Result (R): a + b * 1
+  Success: 1
+
+Example 176:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): !x y. (x ==> y) = (~x \/ y)
+  Result (R): a + b * 1
+  Success: 1
+
+Example 177:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Result (R): a + b * 1
+  Success: 1
+
+Example 178:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): (a + 0) * (b * 1)
+  Result (R): a + b * 1
+  Success: 1
+
+Example 179:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): (a + b) + c
+  Result (R): a + b * 1
+  Success: 1
+
+Example 180:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): a * (b + c)
+  Result (R): a + b * 1
+  Success: 1
+
+Example 181:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): (a + b) * c
+  Result (R): a + b * 1
+  Success: 1
+
+Example 182:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): ~(P /\ Q)
+  Result (R): a + b * 1
+  Success: 1
+
+Example 183:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): (P ==> Q) \/ R
+  Result (R): a + b * 1
+  Success: 1
+
+Example 184:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): (a * b) * c
+  Result (R): a + b * 1
+  Success: 1
+
+Example 185:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): a * (b * c)
+  Result (R): a + b * 1
+  Success: 1
+
+Example 186:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): (a + b) + (c + d)
+  Result (R): a + b * 1
+  Success: 1
+
+Example 187:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): (a * b) + (a * c)
+  Result (R): a + b * 1
+  Success: 1
+
+Example 188:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): (a \/ b) /\ (c \/ d)
+  Result (R): a + b * 1
+  Success: 1
+
+Example 189:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): (P <=> Q) ==> R
+  Result (R): a + b * 1
+  Success: 1
+
+Example 190:
+  Theorem (T): (a + 0) + (b * 1)
+  Parameter (P): ~(P \/ Q) /\ R
+  Result (R): a + b * 1
+  Success: 1
+
+Example 191:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): !x. (x + 0) = x
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 192:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): !x. (x * 1) = x
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 193:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 194:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result (R): d * a * b + c
+  Success: 1
+
+Example 195:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): !x y z. (x + (y + z)) = ((x + y) + z)
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 196:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): !x y z. (x * (y * z)) = ((x * y) * z)
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 197:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Result (R): a * b + a * c * d
+  Success: 1
+
+Example 198:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 199:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): !x. ~~x = x
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 200:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): !x y. ~(x /\ y) = (~x \/ ~y)
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 201:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): !x y. ~(x \/ y) = (~x /\ ~y)
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 202:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): !x y. (x ==> y) = (~x \/ y)
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 203:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 204:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): (a + 0) * (b * 1)
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 205:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): (a + b) + c
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 206:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): a * (b + c)
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 207:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): (a + b) * c
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 208:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): ~(P /\ Q)
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 209:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): (P ==> Q) \/ R
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 210:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): (a * b) * c
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 211:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): a * (b * c)
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 212:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): (a + b) + (c + d)
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 213:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): (a * b) + (a * c)
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 214:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): (a \/ b) /\ (c \/ d)
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 215:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): (P <=> Q) ==> R
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 216:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): ~(P \/ Q) /\ R
+  Result (R): a * c + b * d
+  Success: 1
+
+Example 217:
+  Theorem (T): (a * (b + c)) * d
+  Parameter (P): (a + 0) + (b * 1)
+  Result (R): a * c + b * d
+  Success: 1
+
+
+================================================================================
+
+FAILED REWRITES:
+----------------------------------------
+Example 1:
+  Theorem (T): !x. (x * 1) = x
+  Parameter (P): !x. (x + 0) = x
+  Result: None (failed)
+  Success: 0
+
+Example 2:
+  Theorem (T): !x y. (x + y) = (y + x)
+  Parameter (P): !x. (x + 0) = x
+  Result: None (failed)
+  Success: 0
+
+Example 3:
+  Theorem (T): !x y. (x + y) = (y + x)
+  Parameter (P): !x. (x * 1) = x
+  Result: None (failed)
+  Success: 0
+
+Example 4:
+  Theorem (T): !x y. (x * y) = (y * x)
+  Parameter (P): !x. (x + 0) = x
+  Result: None (failed)
+  Success: 0
+
+Example 5:
+  Theorem (T): !x y. (x * y) = (y * x)
+  Parameter (P): !x. (x * 1) = x
+  Result: None (failed)
+  Success: 0
+
+Example 6:
+  Theorem (T): !x y. (x * y) = (y * x)
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result: None (failed)
+  Success: 0
+
+Example 7:
+  Theorem (T): !x y z. (x + (y + z)) = ((x + y) + z)
+  Parameter (P): !x. (x + 0) = x
+  Result: None (failed)
+  Success: 0
+
+Example 8:
+  Theorem (T): !x y z. (x + (y + z)) = ((x + y) + z)
+  Parameter (P): !x. (x * 1) = x
+  Result: None (failed)
+  Success: 0
+
+Example 9:
+  Theorem (T): !x y z. (x + (y + z)) = ((x + y) + z)
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result: None (failed)
+  Success: 0
+
+Example 10:
+  Theorem (T): !x y z. (x + (y + z)) = ((x + y) + z)
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result: None (failed)
+  Success: 0
+
+Example 11:
+  Theorem (T): !x y z. (x * (y * z)) = ((x * y) * z)
+  Parameter (P): !x. (x + 0) = x
+  Result: None (failed)
+  Success: 0
+
+Example 12:
+  Theorem (T): !x y z. (x * (y * z)) = ((x * y) * z)
+  Parameter (P): !x. (x * 1) = x
+  Result: None (failed)
+  Success: 0
+
+Example 13:
+  Theorem (T): !x y z. (x * (y * z)) = ((x * y) * z)
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result: None (failed)
+  Success: 0
+
+Example 14:
+  Theorem (T): !x y z. (x * (y * z)) = ((x * y) * z)
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result: None (failed)
+  Success: 0
+
+Example 15:
+  Theorem (T): !x y z. (x * (y * z)) = ((x * y) * z)
+  Parameter (P): !x y z. (x + (y + z)) = ((x + y) + z)
+  Result: None (failed)
+  Success: 0
+
+Example 16:
+  Theorem (T): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Parameter (P): !x. (x + 0) = x
+  Result: None (failed)
+  Success: 0
+
+Example 17:
+  Theorem (T): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Parameter (P): !x. (x * 1) = x
+  Result: None (failed)
+  Success: 0
+
+Example 18:
+  Theorem (T): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result: None (failed)
+  Success: 0
+
+Example 19:
+  Theorem (T): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result: None (failed)
+  Success: 0
+
+Example 20:
+  Theorem (T): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Parameter (P): !x y z. (x + (y + z)) = ((x + y) + z)
+  Result: None (failed)
+  Success: 0
+
+Example 21:
+  Theorem (T): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Parameter (P): !x y z. (x * (y * z)) = ((x * y) * z)
+  Result: None (failed)
+  Success: 0
+
+Example 22:
+  Theorem (T): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Parameter (P): !x. (x + 0) = x
+  Result: None (failed)
+  Success: 0
+
+Example 23:
+  Theorem (T): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Parameter (P): !x. (x * 1) = x
+  Result: None (failed)
+  Success: 0
+
+Example 24:
+  Theorem (T): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result: None (failed)
+  Success: 0
+
+Example 25:
+  Theorem (T): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result: None (failed)
+  Success: 0
+
+Example 26:
+  Theorem (T): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Parameter (P): !x y z. (x + (y + z)) = ((x + y) + z)
+  Result: None (failed)
+  Success: 0
+
+Example 27:
+  Theorem (T): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Parameter (P): !x y z. (x * (y * z)) = ((x * y) * z)
+  Result: None (failed)
+  Success: 0
+
+Example 28:
+  Theorem (T): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Parameter (P): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Result: None (failed)
+  Success: 0
+
+Example 29:
+  Theorem (T): !x. ~~x = x
+  Parameter (P): !x. (x + 0) = x
+  Result: None (failed)
+  Success: 0
+
+Example 30:
+  Theorem (T): !x. ~~x = x
+  Parameter (P): !x. (x * 1) = x
+  Result: None (failed)
+  Success: 0
+
+Example 31:
+  Theorem (T): !x. ~~x = x
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result: None (failed)
+  Success: 0
+
+Example 32:
+  Theorem (T): !x. ~~x = x
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result: None (failed)
+  Success: 0
+
+Example 33:
+  Theorem (T): !x. ~~x = x
+  Parameter (P): !x y z. (x + (y + z)) = ((x + y) + z)
+  Result: None (failed)
+  Success: 0
+
+Example 34:
+  Theorem (T): !x. ~~x = x
+  Parameter (P): !x y z. (x * (y * z)) = ((x * y) * z)
+  Result: None (failed)
+  Success: 0
+
+Example 35:
+  Theorem (T): !x. ~~x = x
+  Parameter (P): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Result: None (failed)
+  Success: 0
+
+Example 36:
+  Theorem (T): !x. ~~x = x
+  Parameter (P): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Result: None (failed)
+  Success: 0
+
+Example 37:
+  Theorem (T): !x y. ~(x /\ y) = (~x \/ ~y)
+  Parameter (P): !x. (x + 0) = x
+  Result: None (failed)
+  Success: 0
+
+Example 38:
+  Theorem (T): !x y. ~(x /\ y) = (~x \/ ~y)
+  Parameter (P): !x. (x * 1) = x
+  Result: None (failed)
+  Success: 0
+
+Example 39:
+  Theorem (T): !x y. ~(x /\ y) = (~x \/ ~y)
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result: None (failed)
+  Success: 0
+
+Example 40:
+  Theorem (T): !x y. ~(x /\ y) = (~x \/ ~y)
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result: None (failed)
+  Success: 0
+
+Example 41:
+  Theorem (T): !x y. ~(x /\ y) = (~x \/ ~y)
+  Parameter (P): !x y z. (x + (y + z)) = ((x + y) + z)
+  Result: None (failed)
+  Success: 0
+
+Example 42:
+  Theorem (T): !x y. ~(x /\ y) = (~x \/ ~y)
+  Parameter (P): !x y z. (x * (y * z)) = ((x * y) * z)
+  Result: None (failed)
+  Success: 0
+
+Example 43:
+  Theorem (T): !x y. ~(x /\ y) = (~x \/ ~y)
+  Parameter (P): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Result: None (failed)
+  Success: 0
+
+Example 44:
+  Theorem (T): !x y. ~(x /\ y) = (~x \/ ~y)
+  Parameter (P): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Result: None (failed)
+  Success: 0
+
+Example 45:
+  Theorem (T): !x y. ~(x /\ y) = (~x \/ ~y)
+  Parameter (P): !x. ~~x = x
+  Result: None (failed)
+  Success: 0
+
+Example 46:
+  Theorem (T): !x y. ~(x \/ y) = (~x /\ ~y)
+  Parameter (P): !x. (x + 0) = x
+  Result: None (failed)
+  Success: 0
+
+Example 47:
+  Theorem (T): !x y. ~(x \/ y) = (~x /\ ~y)
+  Parameter (P): !x. (x * 1) = x
+  Result: None (failed)
+  Success: 0
+
+Example 48:
+  Theorem (T): !x y. ~(x \/ y) = (~x /\ ~y)
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result: None (failed)
+  Success: 0
+
+Example 49:
+  Theorem (T): !x y. ~(x \/ y) = (~x /\ ~y)
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result: None (failed)
+  Success: 0
+
+Example 50:
+  Theorem (T): !x y. ~(x \/ y) = (~x /\ ~y)
+  Parameter (P): !x y z. (x + (y + z)) = ((x + y) + z)
+  Result: None (failed)
+  Success: 0
+
+Example 51:
+  Theorem (T): !x y. ~(x \/ y) = (~x /\ ~y)
+  Parameter (P): !x y z. (x * (y * z)) = ((x * y) * z)
+  Result: None (failed)
+  Success: 0
+
+Example 52:
+  Theorem (T): !x y. ~(x \/ y) = (~x /\ ~y)
+  Parameter (P): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Result: None (failed)
+  Success: 0
+
+Example 53:
+  Theorem (T): !x y. ~(x \/ y) = (~x /\ ~y)
+  Parameter (P): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Result: None (failed)
+  Success: 0
+
+Example 54:
+  Theorem (T): !x y. ~(x \/ y) = (~x /\ ~y)
+  Parameter (P): !x. ~~x = x
+  Result: None (failed)
+  Success: 0
+
+Example 55:
+  Theorem (T): !x y. ~(x \/ y) = (~x /\ ~y)
+  Parameter (P): !x y. ~(x /\ y) = (~x \/ ~y)
+  Result: None (failed)
+  Success: 0
+
+Example 56:
+  Theorem (T): !x y. (x ==> y) = (~x \/ y)
+  Parameter (P): !x. (x + 0) = x
+  Result: None (failed)
+  Success: 0
+
+Example 57:
+  Theorem (T): !x y. (x ==> y) = (~x \/ y)
+  Parameter (P): !x. (x * 1) = x
+  Result: None (failed)
+  Success: 0
+
+Example 58:
+  Theorem (T): !x y. (x ==> y) = (~x \/ y)
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result: None (failed)
+  Success: 0
+
+Example 59:
+  Theorem (T): !x y. (x ==> y) = (~x \/ y)
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result: None (failed)
+  Success: 0
+
+Example 60:
+  Theorem (T): !x y. (x ==> y) = (~x \/ y)
+  Parameter (P): !x y z. (x + (y + z)) = ((x + y) + z)
+  Result: None (failed)
+  Success: 0
+
+Example 61:
+  Theorem (T): !x y. (x ==> y) = (~x \/ y)
+  Parameter (P): !x y z. (x * (y * z)) = ((x * y) * z)
+  Result: None (failed)
+  Success: 0
+
+Example 62:
+  Theorem (T): !x y. (x ==> y) = (~x \/ y)
+  Parameter (P): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Result: None (failed)
+  Success: 0
+
+Example 63:
+  Theorem (T): !x y. (x ==> y) = (~x \/ y)
+  Parameter (P): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Result: None (failed)
+  Success: 0
+
+Example 64:
+  Theorem (T): !x y. (x ==> y) = (~x \/ y)
+  Parameter (P): !x. ~~x = x
+  Result: None (failed)
+  Success: 0
+
+Example 65:
+  Theorem (T): !x y. (x ==> y) = (~x \/ y)
+  Parameter (P): !x y. ~(x /\ y) = (~x \/ ~y)
+  Result: None (failed)
+  Success: 0
+
+Example 66:
+  Theorem (T): !x y. (x ==> y) = (~x \/ y)
+  Parameter (P): !x y. ~(x \/ y) = (~x /\ ~y)
+  Result: None (failed)
+  Success: 0
+
+Example 67:
+  Theorem (T): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Parameter (P): !x. (x + 0) = x
+  Result: None (failed)
+  Success: 0
+
+Example 68:
+  Theorem (T): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Parameter (P): !x. (x * 1) = x
+  Result: None (failed)
+  Success: 0
+
+Example 69:
+  Theorem (T): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result: None (failed)
+  Success: 0
+
+Example 70:
+  Theorem (T): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result: None (failed)
+  Success: 0
+
+Example 71:
+  Theorem (T): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Parameter (P): !x y z. (x + (y + z)) = ((x + y) + z)
+  Result: None (failed)
+  Success: 0
+
+Example 72:
+  Theorem (T): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Parameter (P): !x y z. (x * (y * z)) = ((x * y) * z)
+  Result: None (failed)
+  Success: 0
+
+Example 73:
+  Theorem (T): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Parameter (P): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Result: None (failed)
+  Success: 0
+
+Example 74:
+  Theorem (T): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Parameter (P): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Result: None (failed)
+  Success: 0
+
+Example 75:
+  Theorem (T): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Parameter (P): !x. ~~x = x
+  Result: None (failed)
+  Success: 0
+
+Example 76:
+  Theorem (T): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Parameter (P): !x y. ~(x /\ y) = (~x \/ ~y)
+  Result: None (failed)
+  Success: 0
+
+Example 77:
+  Theorem (T): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Parameter (P): !x y. ~(x \/ y) = (~x /\ ~y)
+  Result: None (failed)
+  Success: 0
+
+Example 78:
+  Theorem (T): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Parameter (P): !x y. (x ==> y) = (~x \/ y)
+  Result: None (failed)
+  Success: 0
+
+Example 79:
+  Theorem (T): ~(P /\ Q)
+  Parameter (P): !x. (x + 0) = x
+  Result: None (failed)
+  Success: 0
+
+Example 80:
+  Theorem (T): ~(P /\ Q)
+  Parameter (P): !x. (x * 1) = x
+  Result: None (failed)
+  Success: 0
+
+Example 81:
+  Theorem (T): ~(P /\ Q)
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result: None (failed)
+  Success: 0
+
+Example 82:
+  Theorem (T): ~(P /\ Q)
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result: None (failed)
+  Success: 0
+
+Example 83:
+  Theorem (T): ~(P /\ Q)
+  Parameter (P): !x y z. (x + (y + z)) = ((x + y) + z)
+  Result: None (failed)
+  Success: 0
+
+Example 84:
+  Theorem (T): ~(P /\ Q)
+  Parameter (P): !x y z. (x * (y * z)) = ((x * y) * z)
+  Result: None (failed)
+  Success: 0
+
+Example 85:
+  Theorem (T): ~(P /\ Q)
+  Parameter (P): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Result: None (failed)
+  Success: 0
+
+Example 86:
+  Theorem (T): ~(P /\ Q)
+  Parameter (P): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Result: None (failed)
+  Success: 0
+
+Example 87:
+  Theorem (T): ~(P /\ Q)
+  Parameter (P): !x. ~~x = x
+  Result: None (failed)
+  Success: 0
+
+Example 88:
+  Theorem (T): ~(P /\ Q)
+  Parameter (P): !x y. ~(x /\ y) = (~x \/ ~y)
+  Result: None (failed)
+  Success: 0
+
+Example 89:
+  Theorem (T): ~(P /\ Q)
+  Parameter (P): !x y. ~(x \/ y) = (~x /\ ~y)
+  Result: None (failed)
+  Success: 0
+
+Example 90:
+  Theorem (T): ~(P /\ Q)
+  Parameter (P): !x y. (x ==> y) = (~x \/ y)
+  Result: None (failed)
+  Success: 0
+
+Example 91:
+  Theorem (T): ~(P /\ Q)
+  Parameter (P): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Result: None (failed)
+  Success: 0
+
+Example 92:
+  Theorem (T): ~(P /\ Q)
+  Parameter (P): (a + 0) * (b * 1)
+  Result: None (failed)
+  Success: 0
+
+Example 93:
+  Theorem (T): ~(P /\ Q)
+  Parameter (P): (a + b) + c
+  Result: None (failed)
+  Success: 0
+
+Example 94:
+  Theorem (T): ~(P /\ Q)
+  Parameter (P): a * (b + c)
+  Result: None (failed)
+  Success: 0
+
+Example 95:
+  Theorem (T): ~(P /\ Q)
+  Parameter (P): (a + b) * c
+  Result: None (failed)
+  Success: 0
+
+Example 96:
+  Theorem (T): (P ==> Q) \/ R
+  Parameter (P): !x. (x + 0) = x
+  Result: None (failed)
+  Success: 0
+
+Example 97:
+  Theorem (T): (P ==> Q) \/ R
+  Parameter (P): !x. (x * 1) = x
+  Result: None (failed)
+  Success: 0
+
+Example 98:
+  Theorem (T): (P ==> Q) \/ R
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result: None (failed)
+  Success: 0
+
+Example 99:
+  Theorem (T): (P ==> Q) \/ R
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result: None (failed)
+  Success: 0
+
+Example 100:
+  Theorem (T): (P ==> Q) \/ R
+  Parameter (P): !x y z. (x + (y + z)) = ((x + y) + z)
+  Result: None (failed)
+  Success: 0
+
+Example 101:
+  Theorem (T): (P ==> Q) \/ R
+  Parameter (P): !x y z. (x * (y * z)) = ((x * y) * z)
+  Result: None (failed)
+  Success: 0
+
+Example 102:
+  Theorem (T): (P ==> Q) \/ R
+  Parameter (P): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Result: None (failed)
+  Success: 0
+
+Example 103:
+  Theorem (T): (P ==> Q) \/ R
+  Parameter (P): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Result: None (failed)
+  Success: 0
+
+Example 104:
+  Theorem (T): (P ==> Q) \/ R
+  Parameter (P): !x. ~~x = x
+  Result: None (failed)
+  Success: 0
+
+Example 105:
+  Theorem (T): (P ==> Q) \/ R
+  Parameter (P): !x y. ~(x /\ y) = (~x \/ ~y)
+  Result: None (failed)
+  Success: 0
+
+Example 106:
+  Theorem (T): (P ==> Q) \/ R
+  Parameter (P): !x y. ~(x \/ y) = (~x /\ ~y)
+  Result: None (failed)
+  Success: 0
+
+Example 107:
+  Theorem (T): (P ==> Q) \/ R
+  Parameter (P): !x y. (x ==> y) = (~x \/ y)
+  Result: None (failed)
+  Success: 0
+
+Example 108:
+  Theorem (T): (P ==> Q) \/ R
+  Parameter (P): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Result: None (failed)
+  Success: 0
+
+Example 109:
+  Theorem (T): (P ==> Q) \/ R
+  Parameter (P): (a + 0) * (b * 1)
+  Result: None (failed)
+  Success: 0
+
+Example 110:
+  Theorem (T): (P ==> Q) \/ R
+  Parameter (P): (a + b) + c
+  Result: None (failed)
+  Success: 0
+
+Example 111:
+  Theorem (T): (P ==> Q) \/ R
+  Parameter (P): a * (b + c)
+  Result: None (failed)
+  Success: 0
+
+Example 112:
+  Theorem (T): (P ==> Q) \/ R
+  Parameter (P): (a + b) * c
+  Result: None (failed)
+  Success: 0
+
+Example 113:
+  Theorem (T): (P ==> Q) \/ R
+  Parameter (P): ~(P /\ Q)
+  Result: None (failed)
+  Success: 0
+
+Example 114:
+  Theorem (T): (a \/ b) /\ (c \/ d)
+  Parameter (P): !x. (x + 0) = x
+  Result: None (failed)
+  Success: 0
+
+Example 115:
+  Theorem (T): (a \/ b) /\ (c \/ d)
+  Parameter (P): !x. (x * 1) = x
+  Result: None (failed)
+  Success: 0
+
+Example 116:
+  Theorem (T): (a \/ b) /\ (c \/ d)
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result: None (failed)
+  Success: 0
+
+Example 117:
+  Theorem (T): (a \/ b) /\ (c \/ d)
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result: None (failed)
+  Success: 0
+
+Example 118:
+  Theorem (T): (a \/ b) /\ (c \/ d)
+  Parameter (P): !x y z. (x + (y + z)) = ((x + y) + z)
+  Result: None (failed)
+  Success: 0
+
+Example 119:
+  Theorem (T): (a \/ b) /\ (c \/ d)
+  Parameter (P): !x y z. (x * (y * z)) = ((x * y) * z)
+  Result: None (failed)
+  Success: 0
+
+Example 120:
+  Theorem (T): (a \/ b) /\ (c \/ d)
+  Parameter (P): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Result: None (failed)
+  Success: 0
+
+Example 121:
+  Theorem (T): (a \/ b) /\ (c \/ d)
+  Parameter (P): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Result: None (failed)
+  Success: 0
+
+Example 122:
+  Theorem (T): (a \/ b) /\ (c \/ d)
+  Parameter (P): !x. ~~x = x
+  Result: None (failed)
+  Success: 0
+
+Example 123:
+  Theorem (T): (a \/ b) /\ (c \/ d)
+  Parameter (P): !x y. ~(x /\ y) = (~x \/ ~y)
+  Result: None (failed)
+  Success: 0
+
+Example 124:
+  Theorem (T): (a \/ b) /\ (c \/ d)
+  Parameter (P): !x y. ~(x \/ y) = (~x /\ ~y)
+  Result: None (failed)
+  Success: 0
+
+Example 125:
+  Theorem (T): (a \/ b) /\ (c \/ d)
+  Parameter (P): !x y. (x ==> y) = (~x \/ y)
+  Result: None (failed)
+  Success: 0
+
+Example 126:
+  Theorem (T): (a \/ b) /\ (c \/ d)
+  Parameter (P): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Result: None (failed)
+  Success: 0
+
+Example 127:
+  Theorem (T): (a \/ b) /\ (c \/ d)
+  Parameter (P): (a + 0) * (b * 1)
+  Result: None (failed)
+  Success: 0
+
+Example 128:
+  Theorem (T): (a \/ b) /\ (c \/ d)
+  Parameter (P): (a + b) + c
+  Result: None (failed)
+  Success: 0
+
+Example 129:
+  Theorem (T): (a \/ b) /\ (c \/ d)
+  Parameter (P): a * (b + c)
+  Result: None (failed)
+  Success: 0
+
+Example 130:
+  Theorem (T): (a \/ b) /\ (c \/ d)
+  Parameter (P): (a + b) * c
+  Result: None (failed)
+  Success: 0
+
+Example 131:
+  Theorem (T): (a \/ b) /\ (c \/ d)
+  Parameter (P): ~(P /\ Q)
+  Result: None (failed)
+  Success: 0
+
+Example 132:
+  Theorem (T): (a \/ b) /\ (c \/ d)
+  Parameter (P): (P ==> Q) \/ R
+  Result: None (failed)
+  Success: 0
+
+Example 133:
+  Theorem (T): (a \/ b) /\ (c \/ d)
+  Parameter (P): (a * b) * c
+  Result: None (failed)
+  Success: 0
+
+Example 134:
+  Theorem (T): (a \/ b) /\ (c \/ d)
+  Parameter (P): a * (b * c)
+  Result: None (failed)
+  Success: 0
+
+Example 135:
+  Theorem (T): (a \/ b) /\ (c \/ d)
+  Parameter (P): (a + b) + (c + d)
+  Result: None (failed)
+  Success: 0
+
+Example 136:
+  Theorem (T): (a \/ b) /\ (c \/ d)
+  Parameter (P): (a * b) + (a * c)
+  Result: None (failed)
+  Success: 0
+
+Example 137:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): !x. (x + 0) = x
+  Result: None (failed)
+  Success: 0
+
+Example 138:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): !x. (x * 1) = x
+  Result: None (failed)
+  Success: 0
+
+Example 139:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): !x y. (x + y) = (y + x)
+  Result: None (failed)
+  Success: 0
+
+Example 140:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): !x y. (x * y) = (y * x)
+  Result: None (failed)
+  Success: 0
+
+Example 141:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): !x y z. (x + (y + z)) = ((x + y) + z)
+  Result: None (failed)
+  Success: 0
+
+Example 142:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): !x y z. (x * (y * z)) = ((x * y) * z)
+  Result: None (failed)
+  Success: 0
+
+Example 143:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): !x y z. (x * (y + z)) = ((x * y) + (x * z))
+  Result: None (failed)
+  Success: 0
+
+Example 144:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): !x y z. ((x + y) * z) = ((x * z) + (y * z))
+  Result: None (failed)
+  Success: 0
+
+Example 145:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): !x. ~~x = x
+  Result: None (failed)
+  Success: 0
+
+Example 146:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): !x y. ~(x /\ y) = (~x \/ ~y)
+  Result: None (failed)
+  Success: 0
+
+Example 147:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): !x y. ~(x \/ y) = (~x /\ ~y)
+  Result: None (failed)
+  Success: 0
+
+Example 148:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): !x y. (x ==> y) = (~x \/ y)
+  Result: None (failed)
+  Success: 0
+
+Example 149:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): !x y. (x <=> y) = ((x ==> y) /\ (y ==> x))
+  Result: None (failed)
+  Success: 0
+
+Example 150:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): (a + 0) * (b * 1)
+  Result: None (failed)
+  Success: 0
+
+Example 151:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): (a + b) + c
+  Result: None (failed)
+  Success: 0
+
+Example 152:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): a * (b + c)
+  Result: None (failed)
+  Success: 0
+
+Example 153:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): (a + b) * c
+  Result: None (failed)
+  Success: 0
+
+Example 154:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): ~(P /\ Q)
+  Result: None (failed)
+  Success: 0
+
+Example 155:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): (P ==> Q) \/ R
+  Result: None (failed)
+  Success: 0
+
+Example 156:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): (a * b) * c
+  Result: None (failed)
+  Success: 0
+
+Example 157:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): a * (b * c)
+  Result: None (failed)
+  Success: 0
+
+Example 158:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): (a + b) + (c + d)
+  Result: None (failed)
+  Success: 0
+
+Example 159:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): (a * b) + (a * c)
+  Result: None (failed)
+  Success: 0
+
+Example 160:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): (a \/ b) /\ (c \/ d)
+  Result: None (failed)
+  Success: 0
+
+Example 161:
+  Theorem (T): ~(P \/ Q) /\ R
+  Parameter (P): (P <=> Q) ==> R
+  Result: None (failed)
+  Success: 0
+
