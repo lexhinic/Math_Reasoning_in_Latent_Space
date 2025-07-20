@@ -1,7 +1,7 @@
 class Config:
     # Data parameters
-    HOL_LIGHT_PATH = "/home/stu4/hol_light"
-    HOLIST_DB_PATH = "/home/stu4/formal_reasoning/baseline/Math_Reasoning_in_Latent_Space/hol"
+    HOL_LIGHT_PATH = "./hol_light"
+    HOLIST_DB_PATH = "./hol"
     TRAIN_SPLIT = 10 #11655
     VAL_SPLIT = 10 #668
     TEST_SPLIT = 10 #3620
